@@ -5,7 +5,7 @@ pipeline {
         stage('Scan Base Image') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/kmayer10/ibm-aquasec.git'
+                git 'https://github.com/divyanjali1/ibm-aquasec.git'
                 sh label: '', script: 'trivy client --remote http://54.144.250.10:8080 --format template --template @junit.tpl -o base-image.xml centos:8'
                 junit allowEmptyResults: true, testResults: 'base-image.xml'
             }
