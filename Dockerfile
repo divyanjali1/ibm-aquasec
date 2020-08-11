@@ -1,5 +1,5 @@
 FROM centos:8
-LABEL Maintainer=divya Mail=divyanjali025@gmail.com
+LABEL Maintainer=divya 
 RUN yum install -y java wget
 RUN adduser tomcat -d /opt/app
 USER tomcat
